@@ -24,64 +24,88 @@
       </div>
     </nav>
 
-    <div class="container mx-auto mt-8">
-      <div id="weight" class="py-4">
-        <h2 class="text-2xl font-bold mb-4">Weight Converter</h2>
-        <!-- Weight conversion form -->
-        <form id="weightConverterForm">
-          <label for="weightValue">Enter a value in kilograms:</label>
-          <input
-            type="number"
-            id="weightValue"
-            class="p-2 mb-4"
-            placeholder="Enter value in kilograms"
-            required
-          />
-          <button type="submit" class="bg-blue-500 text-white p-2">
-            Convert
-          </button>
-        </form>
+    <div id="temperature" class="py-4">
+      <h2 class="text-2xl font-bold mb-4">Temperature Converter</h2>
+      <!-- Temperature conversion form -->
+      <form id="temperatureConverterForm" data-from="°C" data-to="°F">
+        <label for="temperatureValue" id="labelInput" class="labelInput">
+          °C to °F:
+        </label>
+        <input
+          type="number"
+          id="temperatureValue"
+          class="p-2 mb-4"
+          placeholder="Enter value in Celsius"
+          required
+        />
+        <button type="submit" class="bg-blue-500 text-white p-2">
+          Convert
+        </button>
+        <button
+          type="button"
+          id="toggleTemperatureConversion"
+          class="bg-gray-500 text-white p-2"
+        >
+          Toggle Conversion
+        </button>
+      </form>
+      <div id="temperatureConversionResults" class="mt-4"></div>
+    </div>
 
-        <div id="weightConversionResults" class="mt-4"></div>
-      </div>
+    <div id="weight" class="py-4">
+      <h2 class="text-2xl font-bold mb-4">Weight Converter</h2>
+      <!-- Temperature conversion form -->
+      <form id="weightConverterForm" data-from="kg" data-to="lb">
+        <label for="weightValue" id="labelInput" class="labelInput">
+          Kg to lb:
+        </label>
+        <input
+          type="number"
+          id="weightValue"
+          class="p-2 mb-4"
+          placeholder="Enter value in Kilograms"
+          required
+        />
+        <button type="submit" class="bg-blue-500 text-white p-2">
+          Convert
+        </button>
+        <button
+          type="button"
+          id="toggleWeightConversion"
+          class="bg-gray-500 text-white p-2"
+        >
+          Toggle Conversion
+        </button>
+      </form>
+      <div id="weightConversionResults" class="mt-4"></div>
+    </div>
 
-      <div id="temperature" class="py-4 hidden">
-        <h2 class="text-2xl font-bold mb-4">Temperature Converter</h2>
-        <!-- Temperature conversion form -->
-        <form id="temperatureConverterForm">
-          <label for="temperatureValue">Enter a value in Celsius:</label>
-          <input
-            type="number"
-            id="temperatureValue"
-            class="p-2 mb-4"
-            placeholder="Enter value in Celsius"
-            required
-          />
-          <button type="submit" class="bg-blue-500 text-white p-2">
-            Convert
-          </button>
-        </form>
-        <div id="temperatureConversionResults" class="mt-4"></div>
-      </div>
-
-      <div id="distance" class="py-4 hidden">
-        <h2 class="text-2xl font-bold mb-4">Distance Converter</h2>
-        <!-- Distance conversion form -->
-        <form id="distanceConverterForm">
-          <label for="distanceValue">Enter a value in meters:</label>
-          <input
-            type="number"
-            id="distanceValue"
-            class="p-2 mb-4"
-            placeholder="Enter value in meters"
-            required
-          />
-          <button type="submit" class="bg-blue-500 text-white p-2">
-            Convert
-          </button>
-        </form>
-        <div id="distanceConversionResults" class="mt-4"></div>
-      </div>
+    <div id="distance" class="py-4">
+      <h2 class="text-2xl font-bold mb-4">Distance Converter</h2>
+      <!-- Temperature conversion form -->
+      <form id="distanceConverterForm" data-from="km" data-to="mi">
+        <label for="distanceValue" id="labelInput" class="labelInput">
+          Km to mi:
+        </label>
+        <input
+          type="number"
+          id="distanceValue"
+          class="p-2 mb-4"
+          placeholder="Enter value in Kilograms"
+          required
+        />
+        <button type="submit" class="bg-blue-500 text-white p-2">
+          Convert
+        </button>
+        <button
+          type="button"
+          id="toggleDistanceConversion"
+          class="bg-gray-500 text-white p-2"
+        >
+          Toggle Conversion
+        </button>
+      </form>
+      <div id="distanceConversionResults" class="mt-4"></div>
     </div>
 
     <script src="converter.js"></script>
